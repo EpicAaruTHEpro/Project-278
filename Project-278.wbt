@@ -1,0 +1,68 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/BakelitePlastic.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/GenericDoorAppearance.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/abstract/GenericTireAppearance.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.173662742614348 0.9041035969095744 0.3904330133106483 0.9144283068604286
+  position -1.1886115969360451 -1.2205268876212656 1.9896247744981006
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+DEF cone Transform {
+  translation 0.3 0.3 0
+  children [
+    Shape {
+      appearance GenericTireAppearance {
+      }
+      geometry Cone {
+        bottomRadius 0.05
+        height 0.1
+      }
+    }
+  ]
+}
+DEF Cube Shape {
+  appearance BakelitePlastic {
+  }
+  geometry Box {
+    size 0.1 0.1 0.1
+  }
+}
+Transform {
+  translation 0.25 0 0
+  children [
+    DEF Ball Shape {
+      appearance GenericDoorAppearance {
+      }
+      geometry Sphere {
+        radius 0.1
+      }
+    }
+  ]
+}
+E-puck {
+  hidden position_0_0 231.4307850883679
+  hidden position_0_1 275.5250947621104
+  hidden linearVelocity_0 -0.055143170044090146 0.010432014048576998 -3.4961094593773757e-09
+  hidden angularVelocity_0 -0.0012957708342460823 -0.006801929681852734 0.09042096380233311
+  hidden rotation_1 0 1 0 5.236114029902799
+  hidden linearVelocity_1 -0.052867021734764395 0.010001674810567863 -7.276590201366044e-09
+  hidden angularVelocity_1 -0.49795828390415203 -2.632382641536993 0.09213690698678427
+  hidden rotation_2 0 -1 0 0.9350587537913777
+  hidden linearVelocity_2 -0.05748740289401712 0.010875876991690668 6.954774165406032e-09
+  hidden angularVelocity_2 -0.5458967552040632 -2.8852206898943673 0.09240193973451272
+  translation 0.008322913783039225 0.33476671029792593 -6.431122224111359e-05
+  rotation 0.0001440381294322082 4.320429783916981e-05 0.999999988693203 2.956298650154805
+}
